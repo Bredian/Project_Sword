@@ -62,7 +62,7 @@ public class Stamina : MonoBehaviour
                     difficultyCoefficent = 1 + Mathf.Sqrt((swordTransform.position.y - initialY) / difHight);
                     if (currentTime <= (pullTime / difficultyCoefficent))
                     {
-                        transform.localScale = new Vector3(startingXscale * (1 - (currentTime / pullTime)), transform.localScale.y, 1f);
+                        transform.localScale = new Vector3(startingXscale * (1 - (currentTime / (pullTime / difficultyCoefficent))), transform.localScale.y, 1f);
                     }
                     if (currentTime >= (pullTime / difficultyCoefficent))
                     {
@@ -90,7 +90,7 @@ public class Stamina : MonoBehaviour
                     difficultyCoefficent = 1 + Mathf.Sqrt((swordTransform.position.y - initialY) / difHight);
                     if (currentTime <= (pullTime / difficultyCoefficent))
                     {
-                        transform.localScale = new Vector3(startingXscale * (1 - (currentTime / pullTime)), transform.localScale.y, 1f);
+                        transform.localScale = new Vector3(startingXscale * (1 - (currentTime / (pullTime / difficultyCoefficent))), transform.localScale.y, 1f);
                     }
                     if (currentTime >= (pullTime / difficultyCoefficent))
                     {
