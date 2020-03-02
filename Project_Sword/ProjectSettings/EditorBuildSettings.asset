@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sword.unity
     guid: 4bece5dc8f6cfae42b46499b96b4445d
-  - enabled: 0
-    path: Assets/Scenes/Gameover.unity
-    guid: d4875bdec62560a4d88958321b4ab090
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 13f4d732d28e3f94ab69fd1adf0c04bf
   m_configObjects: {}

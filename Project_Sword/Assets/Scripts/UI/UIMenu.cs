@@ -10,6 +10,7 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private Text gameOverText;
     [SerializeField] private Button adButton;
     [SerializeField] private Button restartButton;
+    [SerializeField] private Button helpButton;
     [SerializeField] private Text messageText;
     [SerializeField] private Text titleText;
     [SerializeField] private GameObject sword;
@@ -44,6 +45,7 @@ public class UIMenu : MonoBehaviour
             restartButton.gameObject.SetActive(true);
             highScore.gameObject.SetActive(true);
             volume.gameObject.SetActive(true);
+            helpButton.gameObject.SetActive(true);
             highScore.text = "High score: " + PlayerPrefs.GetInt("Score", 0);
             return;
         }
@@ -54,6 +56,7 @@ public class UIMenu : MonoBehaviour
             gameOverText.gameObject.SetActive(false);
             highScore.gameObject.SetActive(false);
             volume.gameObject.SetActive(false);
+            helpButton.gameObject.SetActive(false);
             panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0f);
             restartButton.gameObject.SetActive(false);
             return;
@@ -116,8 +119,14 @@ public class UIMenu : MonoBehaviour
     }
     public void StartGame()
     {
+        if (PlayerPrefs.GetInt("Tutorial", 0) == 0)
+        {
+            SceneManager.LoadScene(1);
+            return;
+        }
         if (PlayerPrefs.GetInt("Started",0)==0)
         {
+            
             float throwing = Random.Range(0f, 1f);
             Debug.Log(throwing);
             PlayerPrefs.SetInt("adPlayed", 0);
@@ -134,6 +143,15 @@ public class UIMenu : MonoBehaviour
             PlayerPrefs.SetInt("Started", 1);
         }
         
+    }
+    public void Tutorial()
+    {
+        PlayerPrefs.SetInt("HelpUsed", 1);
+        PlayerPrefs.SetFloat("ScoreBeforeHelp", DragMovement.height);
+        PlayerPrefs.SetFloat("PositionBeforeHelp", sword.transform.position.y);
+        SceneManager.LoadScene(1);
+        //while (SceneManager.GetActiveScene().buildIndex == 0) ;
+        //return;
     }
     public static void RewardedVideo()
     {
@@ -170,11 +188,18 @@ public class UIMenu : MonoBehaviour
     }
     private void Start()
     {
-        volume.value = PlayerPrefs.GetFloat("Volume",1f);
         
+        volume.value = PlayerPrefs.GetFloat("Volume",1f);
+        if (paused)
+        {
+            Pause();
+        }
+        Debug.Log(Time.timeScale);
+        Time.timeScale = 1f;
         sword.GetComponent<DragMovement>().audioSourcePull.volume = PlayerPrefs.GetFloat("Volume", 1f);
         sword.GetComponent<DragMovement>().audioSourceBreak.volume = PlayerPrefs.GetFloat("Volume", 1f);
         titleText.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Volume", 1f);
+
         if (PlayerPrefs.GetInt("Started", 0) == 1)
         {
             

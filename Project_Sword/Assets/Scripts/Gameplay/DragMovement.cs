@@ -25,7 +25,8 @@ public class DragMovement : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        if(PlayerPrefs.GetInt("adPlayed",0) == 1)
+
+        if (PlayerPrefs.GetInt("adPlayed",0) == 1)
         {
             height = PlayerPrefs.GetInt("LastScore", 0);
             transform.position = new Vector3(0f, PlayerPrefs.GetFloat("LastPlace",0f), 0f);
@@ -37,6 +38,14 @@ public class DragMovement : MonoBehaviour
             height = 0f;
             PlayerPrefs.SetInt("LastScore", 0);
             PlayerPrefs.SetFloat("LastPlace", initialY);
+        }
+        if (PlayerPrefs.GetInt("HelpUsed", 0) == 1)
+        {
+            PlayerPrefs.SetInt("HelpUsed", 0);
+            height = PlayerPrefs.GetFloat("ScoreBeforeHelp", 0f);
+            Debug.Log(height);
+            transform.position = new Vector3(transform.position.x, PlayerPrefs.GetFloat("PositionBeforeHelp", initialY), transform.position.z);
+            heightText.text = ((int)(height / 1000)).ToString();
         }
         breakCoefficent = 1f;
     }
@@ -67,6 +76,7 @@ public class DragMovement : MonoBehaviour
             bonusSpeed = 0;
             audioSourcePull.pitch = 1f;
         }
+
         if (!UIMenu.paused)
         {
             if (Application.isMobilePlatform)

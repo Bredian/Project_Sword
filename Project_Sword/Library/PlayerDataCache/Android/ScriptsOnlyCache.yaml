@@ -5,8 +5,6 @@ ScriptsOnlyBuild:
     - Bonus_Manager
     - Bonus_Points
     - Bonus_Speed
-    - Cloud
-    - CloudData
     - DragMovement
     - MessageDestroyer
     - MyButton
@@ -14,6 +12,7 @@ ScriptsOnlyBuild:
     - Owl_Easter_Egg
     - Scroll
     - Stamina
+    - Tutorial
     - UIMenu
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -32,9 +31,6 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
-    UnityEngine.Advertisements.Editor.dll:
-    - UnityEngine.Advertisements.Placeholder
-    - UnityEngine.Advertisements.Platform.Editor.BannerPlaceholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -82,47 +78,126 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11216}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 11720}
+      Script: {instanceID: 11584}
     - Class: 114
-      Script: {instanceID: 11772}
+      Script: {instanceID: 11604}
     - Class: 114
-      Script: {instanceID: 12318}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 12356}
+      Script: {instanceID: 11854}
     - Class: 114
-      Script: {instanceID: 12588}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 12706}
+      Script: {instanceID: 12000}
     - Class: 114
-      Script: {instanceID: 12768}
+      Script: {instanceID: 12024}
     - Class: 114
-      Script: {instanceID: 12796}
+      Script: {instanceID: 12034}
     - Class: 114
-      Script: {instanceID: 13310}
+      Script: {instanceID: 12230}
     - Class: 114
-      Script: {instanceID: 13826}
+      Script: {instanceID: 12464}
     - Class: 114
-      Script: {instanceID: 13922}
+      Script: {instanceID: 12512}
     - Class: 114
-      Script: {instanceID: 14074}
+      Script: {instanceID: 12572}
     - Class: 114
-      Script: {instanceID: 14156}
+      Script: {instanceID: 12618}
     - Class: 114
-      Script: {instanceID: 14618}
+      Script: {instanceID: 12824}
     - Class: 114
-      Script: {instanceID: 14988}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 15950}
+      Script: {instanceID: 13374}
     - Class: 114
-      Script: {instanceID: 16032}
+      Script: {instanceID: 13406}
     - Class: 114
-      Script: {instanceID: 16086}
+      Script: {instanceID: 13422}
     - Class: 114
-      Script: {instanceID: 16116}
+      Script: {instanceID: 13430}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Tutorial.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11370}
+    - Class: 114
+      Script: {instanceID: 11560}
+    - Class: 114
+      Script: {instanceID: 11834}
+    - Class: 114
+      Script: {instanceID: 11952}
+    - Class: 114
+      Script: {instanceID: 12000}
+    - Class: 114
+      Script: {instanceID: 12024}
+    - Class: 114
+      Script: {instanceID: 12034}
+    - Class: 114
+      Script: {instanceID: 12114}
+    - Class: 114
+      Script: {instanceID: 12230}
+    - Class: 114
+      Script: {instanceID: 12512}
+    - Class: 114
+      Script: {instanceID: 12982}
+    - Class: 114
+      Script: {instanceID: 13374}
+    - Class: 114
+      Script: {instanceID: 13422}
+    - Class: 114
+      Script: {instanceID: 13430}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -394,6 +469,12 @@ ScriptsOnlyBuild:
     className: dreamloPromoCode
   - hash:
       serializedVersion: 2
+      Hash: c988c40863bacbc0bad1466dd21bf389
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tutorial
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -478,7 +559,7 @@ ScriptsOnlyBuild:
     className: MessageDestroyer
   - hash:
       serializedVersion: 2
-      Hash: 1124ec6d5fd9b3c5ac96c8d9b126bb54
+      Hash: f18a4109e7b8f17af2af6835d571c26b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIMenu
@@ -701,4 +782,5 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Sword.unity
-  playerPath: C:/Users/Bredian/Desktop/Project_Sword/Builds/Sword.apk
+  - Assets/Scenes/Tutorial.unity
+  playerPath: C:/Hide (1)/Builds/Sword.apk

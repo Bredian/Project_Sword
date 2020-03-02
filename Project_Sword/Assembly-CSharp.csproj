@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\UI\AdSystem.cs" />
     <Compile Include="Assets\Scripts\UI\MessageDestroyer.cs" />
     <Compile Include="Assets\Scripts\UI\MyButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Tutorial.cs" />
     <Compile Include="Assets\Scripts\UI\UIMenu.cs" />
     <Compile Include="Assets\dreamlo\LeaderBoardSample.cs" />
     <Compile Include="Assets\dreamlo\dreamloLeaderBoard.cs" />
