@@ -101,7 +101,7 @@ public class DragMovement : MonoBehaviour
                         newTouchPosition = oldTouchPosition;
                         direction.y = 0;
                     }
-                    if(direction.y != 1000f && Stamina.bonusUsedCoef == 0f)
+                    if(direction.y != 1000f && (Stamina.bonusUsedCoef == 0f && Stamina.bonusTimer <= 0))
                     {
                         direction.y = 0;
                     }
@@ -151,7 +151,7 @@ public class DragMovement : MonoBehaviour
                     newTouchPosition.z = 0f;
                     oldTouchPosition.z = 0f;
                     direction = (newTouchPosition - oldTouchPosition);
-                    if (direction.y >0 && Stamina.bonusUsedCoef == 0f)
+                    if (direction.y >0 && Stamina.bonusUsedCoef == 0f && Stamina.bonusTimer <= 0)
                     {
                         direction.y = 0;
                     }

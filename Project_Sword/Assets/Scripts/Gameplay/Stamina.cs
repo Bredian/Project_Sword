@@ -16,7 +16,7 @@ public class Stamina : MonoBehaviour
     private Transform swordTransform;
     private float initialY;
     public static float pressedPause = 1f;
-    public float bonusTimer = 0f;
+    public static float bonusTimer = 0f;
     public float bonusCoefficent = 1f;
     private float defaultY;
     private int bonusesUsed;
@@ -48,7 +48,11 @@ public class Stamina : MonoBehaviour
         if (bonusTimer <= 0 && bonusCoefficent != 1f)
         {
             bonusTimer = 0;
-            bonusCoefficent = 1;
+            bonusUsedCoef = 1;
+        }
+        if(bonusTimer > 0)
+        {
+            bonusUsedCoef = 0f;
         }
         //transform.position = new Vector3(transform.position.x, defaultY + DragMovement.height, transform.position.z);
         Debug.Log(pullTime/difficultyCoefficent);

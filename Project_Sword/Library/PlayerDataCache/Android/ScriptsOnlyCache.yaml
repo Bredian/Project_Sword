@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - Bonus_Manager
     - Bonus_Points
     - Bonus_Speed
+    - Bonus_Stamina
     - DragMovement
     - MessageDestroyer
     - MyButton
@@ -31,6 +32,9 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.Advertisements.Editor.dll:
+    - UnityEngine.Advertisements.Placeholder
+    - UnityEngine.Advertisements.Platform.Editor.BannerPlaceholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -119,6 +123,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13422}
     - Class: 114
       Script: {instanceID: 13430}
+    - Class: 114
+      Script: {instanceID: 15544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -751,7 +757,7 @@ ScriptsOnlyBuild:
     className: LeaderBoardSample
   - hash:
       serializedVersion: 2
-      Hash: 870c9bd0ed18fc52bb7f990c720e5181
+      Hash: 0b9ce9477ecac69048a2aeca9b193e16
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Stamina
@@ -779,6 +785,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: de1ed86ee2534b793bf05e5115b22153
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bonus_Stamina
   platform: 13
   scenePathNames:
   - Assets/Scenes/Sword.unity

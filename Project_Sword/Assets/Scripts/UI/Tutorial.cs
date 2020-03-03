@@ -22,7 +22,7 @@ public class Tutorial : MonoBehaviour
         switch (section)
         {
             case 0:
-                tutorialText.text = "Drag sword as high as you can";
+                tutorialText.text = "Drag the sword as\nhigh as you can";
                 break;
             case 1:
                 tutorialText.text = "Pop lanterns to get bonuses";
@@ -31,7 +31,7 @@ public class Tutorial : MonoBehaviour
                 tutorialText.text = "Game ends when stamina\nis out";
                 break;
             case 3:
-                tutorialText.text = "Whatch the rewarded video to\ncontinue the game";
+                tutorialText.text = "Watch the rewarded video to\ncontinue the game";
                 break;
             case 4:
                 tutorialText.text = "Have fun!";

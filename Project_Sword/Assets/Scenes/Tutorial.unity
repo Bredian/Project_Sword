@@ -3477,7 +3477,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0d415c2a63c0f8743bb2fcb835c6da9d, type: 3}
-    m_FontSize: 90
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
@@ -3488,9 +3488,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Whatch the rewarded video to
+  m_Text: 'Drag the sword as
 
-    continue the game'
+    high as you can'
 --- !u!222 &1549253012
 CanvasRenderer:
   m_ObjectHideFlags: 0
